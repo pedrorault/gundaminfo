@@ -1,3 +1,50 @@
+GIT
+  remote: https://github.com/rspec/rspec-core.git
+  revision: d57c371ee92b16211b80ac7b0b025968438f5297
+  branch: main
+  specs:
+    rspec-core (3.11.0.pre)
+      rspec-support (= 3.11.0.pre)
+
+GIT
+  remote: https://github.com/rspec/rspec-expectations.git
+  revision: dba67987c63f551d1bf0f7877f069fa8b72d0461
+  branch: main
+  specs:
+    rspec-expectations (3.11.0.pre)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (= 3.11.0.pre)
+
+GIT
+  remote: https://github.com/rspec/rspec-mocks.git
+  revision: 17cf86ab61544b93232c4e9ca9784ab212dccbf6
+  branch: main
+  specs:
+    rspec-mocks (3.11.0.pre)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (= 3.11.0.pre)
+
+GIT
+  remote: https://github.com/rspec/rspec-rails.git
+  revision: 3f0e35085f5765decf96fee179ec9a2e132a67c1
+  branch: main
+  specs:
+    rspec-rails (5.1.0.pre)
+      actionpack (>= 5.2)
+      activesupport (>= 5.2)
+      railties (>= 5.2)
+      rspec-core (= 3.11.0.pre)
+      rspec-expectations (= 3.11.0.pre)
+      rspec-mocks (= 3.11.0.pre)
+      rspec-support (= 3.11.0.pre)
+
+GIT
+  remote: https://github.com/rspec/rspec-support.git
+  revision: 28526172c42302858c18681d7d7580490d885b4d
+  branch: main
+  specs:
+    rspec-support (3.11.0.pre)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -64,6 +111,38 @@ GEM
     byebug (11.1.3)
     concurrent-ruby (1.1.9)
     crass (1.0.6)
+    cucumber (7.1.0)
+      builder (~> 3.2, >= 3.2.4)
+      cucumber-core (~> 10.1, >= 10.1.0)
+      cucumber-create-meta (~> 6.0, >= 6.0.1)
+      cucumber-cucumber-expressions (~> 14.0, >= 14.0.0)
+      cucumber-gherkin (~> 22.0, >= 22.0.0)
+      cucumber-html-formatter (~> 17.0, >= 17.0.0)
+      cucumber-messages (~> 17.1, >= 17.1.1)
+      cucumber-wire (~> 6.2, >= 6.2.0)
+      diff-lcs (~> 1.4, >= 1.4.4)
+      mime-types (~> 3.3, >= 3.3.1)
+      multi_test (~> 0.1, >= 0.1.2)
+      sys-uname (~> 1.2, >= 1.2.2)
+    cucumber-core (10.1.0)
+      cucumber-gherkin (~> 22.0, >= 22.0.0)
+      cucumber-messages (~> 17.1, >= 17.1.1)
+      cucumber-tag-expressions (~> 4.0, >= 4.0.2)
+    cucumber-create-meta (6.0.2)
+      cucumber-messages (~> 17.1, >= 17.1.1)
+      sys-uname (~> 1.2, >= 1.2.2)
+    cucumber-cucumber-expressions (14.0.0)
+    cucumber-gherkin (22.0.0)
+      cucumber-messages (~> 17.1, >= 17.1.1)
+    cucumber-html-formatter (17.0.0)
+      cucumber-messages (~> 17.1, >= 17.1.0)
+    cucumber-messages (17.1.1)
+    cucumber-tag-expressions (4.1.0)
+    cucumber-wire (6.2.0)
+      cucumber-core (~> 10.1, >= 10.1.0)
+      cucumber-cucumber-expressions (~> 14.0, >= 14.0.0)
+      cucumber-messages (~> 17.1, >= 17.1.1)
+    diff-lcs (1.4.4)
     erubi (1.10.0)
     ffi (1.15.4)
     globalid (0.5.2)
@@ -80,8 +159,12 @@ GEM
       mini_mime (>= 0.1.1)
     marcel (1.0.2)
     method_source (1.0.0)
+    mime-types (3.3.1)
+      mime-types-data (~> 3.2015)
+    mime-types-data (3.2021.0901)
     mini_mime (1.1.2)
     minitest (5.14.4)
+    multi_test (0.1.2)
     nio4r (2.5.8)
     nokogiri (1.12.5-x86_64-linux)
       racc (~> 1.4)
@@ -139,6 +222,8 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
+    sys-uname (1.2.2)
+      ffi (~> 1.1)
     thor (1.1.0)
     tilt (2.0.10)
     tzinfo (2.0.4)
@@ -153,10 +238,16 @@ PLATFORMS
 
 DEPENDENCIES
   byebug
+  cucumber (~> 7.1)
   listen (~> 3.3)
   pg (~> 1.1)
   puma (~> 5.0)
   rails (~> 6.1.4, >= 6.1.4.1)
+  rspec-core!
+  rspec-expectations!
+  rspec-mocks!
+  rspec-rails!
+  rspec-support!
   sass-rails (>= 6)
   tzinfo-data
 
