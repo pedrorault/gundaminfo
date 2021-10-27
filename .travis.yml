@@ -4,4 +4,4 @@ rvm:
 services:
   - postgresql
 before_script:
-  - psql -c 'create database database_qa;' -U postgres
+  - psql -c 'create database gunpla_test;' -U postgres

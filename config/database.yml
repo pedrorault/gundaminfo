@@ -21,10 +21,10 @@ default: &default
   # https://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   # == CONFIGURE SEU BANCO LOCAL AQUI ==
-  username: postgres
-  password: postgres
-  host: localhost
-  port: 8432
+  # username: postgres
+  # password: postgres
+  # host: localhost
+  # port: 8432
   # == CONFIGURE SEU BANCO LOCAL AQUI ==
 
 
