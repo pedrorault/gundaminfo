@@ -1,4 +1,13 @@
 <h1>GundamModel#index</h1>
+<div class="field has-addons">
+  <div class="select is-link">
+    <select>
+    <option value="nome">nome</option>
+    </select>
+  </div>
+  <input type="text" class="input" placeholder="Digite o nome do modelo">
+  <button class="button" onclick="">Buscar</button>
+</div>
 <% @gundam_models.each do |gundam| %>
   <div style="border: 1px solid black; margin-bottom: 5px; width: 250px">
   <h3><%= link_to gundam.nome, gundam %></h3>   

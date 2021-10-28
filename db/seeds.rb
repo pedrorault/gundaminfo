@@ -14,5 +14,13 @@ gundams = GundamModel.create(
       escala: '1/144',
       serie: 'Gundam The Origin',
       imagem: 'https://static.wikia.nocookie.net/gundam/images/8/8d/Ms-06f.jpg'
+    },
+    {
+      nome: 'RG RX-78-2 Gundam',
+      qualidade: 'RG',
+      ano: 2010,
+      escala: '1/144',
+      serie: 'Mobile Suit Gundam',
+      imagem: 'https://static.wikia.nocookie.net/gunplabuilders/images/9/9d/RG-RX-78-2-Gundam-Boxart.jpg'
     }
 ])

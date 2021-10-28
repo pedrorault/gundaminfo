@@ -1,10 +1,16 @@
 class GundamModelController < ApplicationController
   def index
-    @gundam_models = GundamModel.all
+    @gundam_models = GundamModel.where(nil)
+    @gundam_models = @gundam_models.filter_by_name_like(params[:name]) if params[:name].present?
   end
 
   def show
-    @gundam = GundamModel.find(params[:id])
+    @x = GundamModel.find_by_id(params[:id])
+    if @x.present?
+      @gundam = @x
+    else
+      render :index
+    end
   end
 
   def new
