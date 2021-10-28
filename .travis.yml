@@ -1,8 +1,8 @@
-language: ruby
 dist: focal
-addons:
-  postgresql: "9.6"
+language: ruby
 services:
   - postgresql
+addons:
+  - postgresql: "9.6"
 before_script:
-  - psql -c 'create database database_qa;' -U postgres
+  - psql -c 'create database travis_ci_test;' -U postgres
