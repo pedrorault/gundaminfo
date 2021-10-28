@@ -1,2 +1,22 @@
-<h1>GundamModel#show</h1>
-<p>Find me in app/views/gundam_model/show.html.erb</p>
+<h1><%= @gundam.nome %></h1>
+<table>
+<tr>
+  <%= image_tag "#{@gundam.imagem}" %>
+</tr>
+<tr>
+  <th>Qualidade</th>
+  <td><%= @gundam.qualidade %></td>
+</tr>
+<tr>
+  <th>Ano</th>
+  <td><%= @gundam.ano %></td>
+</tr>
+<tr>
+  <th>Escala</th>
+  <td><%= @gundam.escala%></td>
+</tr>
+<tr>
+  <th>Série</th>
+  <td><%= @gundam.serie %></td>
+</tr>
+</table>

@@ -1,2 +1,8 @@
 <h1>GundamModel#index</h1>
-<p>Find me in app/views/gundam_model/index.html.erb</p>
+<% @gundam_models.each do |gundam| %>
+  <div style="border: 1px solid black; margin-bottom: 5px; width: 250px">
+  <h3><%= link_to gundam.nome, gundam %></h3>   
+  <%= image_tag "#{gundam.imagem}" %>
+  </div>
+<% end %>
+</ul>
