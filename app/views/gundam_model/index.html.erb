@@ -1,17 +1,23 @@
-<h1>GundamModel#index</h1>
-<div class="field has-addons">
-  <div class="select is-link">
-    <select>
-    <option value="nome">nome</option>
-    </select>
+<div class="columns pt-5">
+  <div class="column is-4 is-offset-4 box is-flex is-flex-direction-column">
+    <h1 class="title is-align-self-center">Modelos de Gunpla</h1>
+    <%= form_tag gundam_model_index_path, :method=> "get" do %>
+      <div class="field has-addons ">
+        <div class="select">
+        <%= select_tag :attr,  options_for_select(["Nome","Ano","Qualidade"],selected: params[:attr])%>
+        </div>
+        <%= text_field_tag :value, params[:value], class: "input", placeholder: "Digite o valor a buscar do modelo" %>
+        <%= submit_tag("Procurar", :name => nil, class: "button is-link") %>
+      </div>
+    <% end %>
+    <hr/>
+    <% @gundam_models.each do |gundam| %>
+      <%# <div style="border: 1px solid black; margin-bottom: 5px; width: 250px" class="is-align-self-center">%>
+      <div class="box is-align-self-center is-flex is-flex-direction-column">
+      <h3 class="is-size-4 is-align-self-center"><%= link_to gundam.nome, gundam %></h3>   
+      <%= image_tag "#{gundam.imagem}" %>
+      </div>
+    <% end %>
+    </ul>
   </div>
-  <input type="text" class="input" placeholder="Digite o nome do modelo">
-  <button class="button" onclick="">Buscar</button>
 </div>
-<% @gundam_models.each do |gundam| %>
-  <div style="border: 1px solid black; margin-bottom: 5px; width: 250px">
-  <h3><%= link_to gundam.nome, gundam %></h3>   
-  <%= image_tag "#{gundam.imagem}" %>
-  </div>
-<% end %>
-</ul>

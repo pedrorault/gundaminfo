@@ -1,8 +1,9 @@
 <div class="columns">
-  <div id="form" class="box column is-4 is-offset-1 mt-5">
+<%= form_with model: gundam_model do |form| %>
+  <div class="box column is-4 is-offset-1 mt-5">
     <div class="field">
       <label for="nomeInput" class="label">Nome</label>
-      <input type="text" class="input" placeholder="Digite o nome do gunpla">
+      <%= form.text_field :nome, class: "input", placeholder: "Digite o nome do gunpla" %>
     </div>
 
     <div class="field">
@@ -51,4 +52,6 @@
       </div>
     </div>
   </div>
+  <% end %>
+  
 </div>
