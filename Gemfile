@@ -29,6 +29,12 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
-gem "cucumber", "~> 7.1"
-
 gem "htmlbeautifier", "~> 1.3", :group => :development
+
+group :test do
+  gem "cucumber", "~> 7.1"
+  gem 'capybara'
+  gem 'selenium-webdriver'
+  gem 'chromedriver-helper'
+  gem 'report_builder'
+end
