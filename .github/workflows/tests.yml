@@ -8,6 +8,16 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres
+      env:
+        POSTGRES_PASSWORD: postgres
+      options: >-
+        --health-cmd pg_isready
+        --health-interval 10s
+        --health-timeout 5s
+        --health-retries 5
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -15,12 +25,8 @@ jobs:
         uses: ruby/setup-ruby@v1.84.0
         with:
           bundler-cache: true
-      - name: Setup postgres
-        uses: harmon758/postgresql-action@v1
-        with:
-          postgresql version: '12'
-          postgresql user: postgres
-          postgresql password: postgres
-          postgresql db: gunpla_test
-      - name: Rake Test  
-        run: bundle exec rake test         
+      - name: Rake Test
+        env:
+          POSTGRES_HOST: postgres
+          POSTGRES_PORT: 5432
+        run: bundle exec rake test
