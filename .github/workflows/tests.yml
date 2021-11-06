@@ -15,9 +15,9 @@ jobs:
           bundler-cache: true
           steps:
         uses: harmon758/postgresql-action@v1
-         with:
-           postgresql version: '12'
-           postgresql user: postgres
-           postgresql password: postgres
-           postgresql db: gunpla_test
+        with:
+          postgresql version: '12'
+          postgresql user: postgres
+          postgresql password: postgres
+          postgresql db: gunpla_test
         run: rake test         
