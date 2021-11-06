@@ -8,10 +8,9 @@ class GundamModelController < ApplicationController
     elsif params[:attr].eql? "Qualidade"
       @gundam_models = @gundam_models.filter_by_qualidade(params[:value]) if params[:value].present?
     else
-      @gundam_models
+      @gundam_models = GundamModel.all
     end
   end
-
   def show
     @x = GundamModel.find_by_id(params[:id])
     if @x.present?
@@ -20,22 +19,19 @@ class GundamModelController < ApplicationController
       render :index
     end
   end
-
   def new
-    @gundam_model = GundamModel.new
+    @gundam = GundamModel.new
   end
   def create
-    @gundam_model = GundamModel.new
+    @gundam = GundamModel.new(params)
 
-    if @gundam_model.save
-      redirect_to @gundam_model
-    else
-      render :new
+    if @gundam.save
+      redirect_to @gundam
     end
-  end
-  def save
-  end
 
-  def edit
   end
+  private
+    def gundam_model_params
+      params.require(:gundam_model).permit(:nome,:qualidade,:ano,:escala,:serie,:imagem)
+    end
 end

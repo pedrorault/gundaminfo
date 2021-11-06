@@ -1,57 +1,10 @@
-<div class="columns">
-<%= form_with model: gundam_model do |form| %>
-  <div class="box column is-4 is-offset-1 mt-5">
-    <div class="field">
-      <label for="nomeInput" class="label">Nome</label>
-      <%= form.text_field :nome, class: "input", placeholder: "Digite o nome do gunpla" %>
-    </div>
-
-    <div class="field">
-      <label for="qualidadeSelect" class="label">Qualidade</label>
-      <div class="select is-fullwidth">
-        <select>
-          <option value="HG">High Grade</option>
-          <option value="RG">Real Grade</option>
-          <option value="PG">Perfect Grade</option>
-        </select>
-      </div>
-
-      <div class="field">
-        <label class="label">Ano</label>
-        <input type="number" class="input">
-      </div>
-
-      <div class="field">
-        <label for="escalaSelect" class="label">Escala</label>
-        <div class="select is-fullwidth">
-        <select>
-          <option value="1/144">1/144</option>
-          <option value="1/100">1/100</option>
-          <option value="1/60">1/60</option>
-          <option value="1/48">1/48</option>
-          <option value="1/12">1/12</option>
-          <option value="Sem Escala">Sem Escala</option>
-        </select>
-      </div>
-
-      <div class="field">
-        <label for="serieInput" class="label">Série</label>
-        <input type="text" class="input" placeholder="Digite a série do gunpla">
-      </div>
-      <div class="field">
-        <label class="label">Subir uma imagem</label>
-        <input type="file" name="" id="">
-      </div>
-      <div class="field is-grouped mt-5">
-        <div class="control">
-          <button class="button">Cancelar</button>
-        </div>
-        <div class="control">
-          <button class="button is-primary">Enviar</button>
-        </div>
-      </div>
-    </div>
+<%= form_with model: gundam_model, method: 'POST', url: '#create' do |form| %>
+  <div>
+    <%= form.label :nome %><br>
+    <%= form.text_field :nome %>
   </div>
-  <% end %>
-  
-</div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
