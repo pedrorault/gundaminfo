@@ -1,0 +1,59 @@
+<div class="columns">
+   <div class="column is-4 m-3">
+      <%= form_with(model: toy) do |form| %>
+      <% if toy.errors.any? %>
+      <div id="error_explanation">
+         <h2><%= pluralize(toy.errors.count, "error") %> prohibited this toy from being saved:</h2>
+         <ul>
+            <% toy.errors.each do |error| %>
+            <li><%= error.full_message %></li>
+            <% end %>
+         </ul>
+      </div>
+      <% end %>
+      <div class="field">
+         <%= form.label :nome, class: 'label' %>
+         <div class="control">
+            <%= form.text_field :nome, class: 'input', placeholder: "Digite o nome do modelo"%>
+         </div>
+      </div>
+      <div class="field">
+         <%= form.label :qualidade, class: 'label' %>
+         <div class="control">
+            <%= form.text_field :qualidade, class: 'input', placeholder: "Digite a qualidade do modelo"%>
+         </div>
+      </div>
+      <div class="field">
+         <%= form.label :ano, class: 'label', type: 'number' %>
+         <div class="control">
+            <%= form.number_field :ano, class: 'input', placeholder: "Digite o ano de lançamento do modelo"%>
+         </div>
+      </div>
+      <div class="field">
+         <%= form.label :escala, class: 'label' %>
+         <div class="control">
+            <%= form.text_field :escala, class: 'input', placeholder: "Escolha a escala do modelo"%>
+         </div>
+      </div>
+      <div class="field">
+         <%= form.label "Série", class: 'label' %>
+         <div class="control">
+            <%= form.text_field :serie, class: 'input', placeholder: "Digite a série que o modelo pertence"%>
+         </div>
+      </div>
+      <div class="field">
+         <%= form.label :imagem, class: 'label' %>
+         <div class="control">
+            <%= form.text_field :imagem, class: 'input', placeholder: 'Insira o link da imagem'%>
+         </div>
+      </div>
+      <div class="actions">
+         <div class="control">
+            <a class="button is-primary">
+              <%= form.submit %>
+            </a>
+         </div>
+      </div>
+      <% end %>
+   </div>
+</div>

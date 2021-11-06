@@ -1,0 +1,35 @@
+on:
+  push:
+    branches:
+      - main
+      - gundam_models
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres
+        env:
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_DB: gunpla_test
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+        ports:
+          - 5432:5432
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Setup Ruby, JRuby and TruffleRuby
+        uses: ruby/setup-ruby@v1.84.0
+        with:
+          bundler-cache: true
+      - name: Rake Test
+        env:
+          POSTGRES_HOST: postgres
+          POSTGRES_PORT: 5432
+        run: bundle exec rake test

@@ -1,0 +1,10 @@
+<%= form_with model: gundam_model, method: 'POST', url: '#create' do |form| %>
+  <div>
+    <%= form.label :nome %><br>
+    <%= form.text_field :nome %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
