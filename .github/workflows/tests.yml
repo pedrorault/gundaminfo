@@ -13,11 +13,14 @@ jobs:
         image: postgres
         env:
           POSTGRES_PASSWORD: postgres
+          POSTGRES_DB: gunpla_test
         options: >-
           --health-cmd pg_isready
           --health-interval 10s
           --health-timeout 5s
           --health-retries 5
+        ports:
+          - 5432/tcp
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
