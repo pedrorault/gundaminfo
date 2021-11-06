@@ -1,7 +1,8 @@
 on:
   push:
     branches:
-      - master
+      - main
+      - gundam_models
   workflow_dispatch:
 
 jobs:
