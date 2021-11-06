@@ -8,16 +8,18 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Setup Ruby, JRuby and TruffleRuby
+      - name: Checkout code
         uses: actions/checkout@v2
+      - name: Setup Ruby, JRuby and TruffleRuby
         uses: ruby/setup-ruby@v1.84.0
         with:
           bundler-cache: true
-          steps:
+      - name: Setup postgres
         uses: harmon758/postgresql-action@v1
         with:
           postgresql version: '12'
           postgresql user: postgres
           postgresql password: postgres
           postgresql db: gunpla_test
+      - name: Rake Test  
         run: rake test         
