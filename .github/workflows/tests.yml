@@ -1,0 +1,23 @@
+on:
+  - push:
+    branches:
+      - master
+  - workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup Ruby, JRuby and TruffleRuby
+        uses: actions/checkout@v2
+        uses: ruby/setup-ruby@v1.84.0
+        with:
+          bundler-cache: true
+          steps:
+        uses: harmon758/postgresql-action@v1
+         with:
+           postgresql version: '12'
+           postgresql user: postgres
+           postgresql password: postgres
+           postgresql db: gunpla_test
+        run: rake test         
