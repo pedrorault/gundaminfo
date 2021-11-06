@@ -1,6 +1,6 @@
-class CreateGundamModels < ActiveRecord::Migration[6.1]
+class CreateToys < ActiveRecord::Migration[6.1]
   def change
-    create_table :gundam_models do |t|
+    create_table :toys do |t|
       t.string :nome
       t.string :qualidade
       t.integer :ano

@@ -1,0 +1,35 @@
+
+<div class="columns pt-5">
+  <div class="column is-4 is-offset-4 box is-flex is-flex-direction-column">
+    <h1 class="title is-align-self-center"><%= @toy.nome %></h1>
+    <%= image_tag "#{@toy.imagem}", style: "width: 300px;height: 400px", class: "is-align-self-center" %>
+    <table class="table is-bordered">
+      <tr>
+        <th>Nome</th>
+        <td><%= @toy.nome %></td>
+      </tr>
+      <tr>
+        <th>Ano</th>
+        <td><%= @toy.ano %></td>
+      </tr>
+      <tr>
+        <th>Qualidade</th>
+        <td><%= @toy.qualidade %></td>
+      </tr>
+      <tr>
+        <th>Série</th>
+        <td><%= @toy.serie %></td>
+      </tr>
+      <tr>
+        <th>Escala</th>
+        <td><%= @toy.escala %></td>
+      </tr>
+    </table>
+    <div class="control is-grouped">
+      <%= link_to 'Voltar', toys_path, class: "button" %>
+      <%= link_to 'Editar', edit_toy_path(@toy), class: "button is-link" %>
+    </div>
+  </div>
+</div>
+
+
