@@ -23,4 +23,4 @@ jobs:
           postgresql password: postgres
           postgresql db: gunpla_test
       - name: Rake Test  
-        run: rake test         
+        run: bundle exec rake test         
