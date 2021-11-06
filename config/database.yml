@@ -65,7 +65,7 @@ development:
 test:
   <<: *default
   database: gunpla_test
-  host:  <%= ENV['POSTGRES_HOST'] %>
+  host:  localhost #<%= ENV['POSTGRES_HOST'] %>
   port: <%= ENV['POSTGRES_PORT'] %>
 
 # As with config/credentials.yml, you never want to store sensitive information,
