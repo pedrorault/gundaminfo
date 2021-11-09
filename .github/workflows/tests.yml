@@ -33,10 +33,6 @@ jobs:
           POSTGRES_HOST: localhost
           POSTGRES_PORT: 5432
           POSTGRES_DB: gunpla_test
-          RAILS_ENV: test
         run: |
-          bin/rails db:prepare
-          echo "===  START Seed ==="
-          bin/rails db:seed --trace
-          echo "===  END Seed ==="
+          bin/rails db:prepare        
           bundle exec rake cucumber
