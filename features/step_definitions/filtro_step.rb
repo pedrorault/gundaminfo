@@ -1,5 +1,5 @@
 Dado('que o usuário esteja na tela principal') do
-    visit 'http://localhost:3000/'
+    visit '/'
   end
 
 Dado('selecione o atributo {string}') do |string|
