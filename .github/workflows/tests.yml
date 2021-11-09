@@ -33,6 +33,7 @@ jobs:
           POSTGRES_HOST: postgres
           POSTGRES_PORT: 5432
         run: |
+          RAILS_ENV=test bin/rails db:migrate
           RAILS_ENV=test bin/rails db:seed
           bundle exec rake test
           bundle exec rake cucumber
