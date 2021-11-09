@@ -2,7 +2,7 @@ on:
   push:
     branches:
       - main
-      - gundam_models
+      - rake-cucumber
   workflow_dispatch:
 
 jobs:
@@ -39,5 +39,4 @@ jobs:
           echo "===  START Seed ==="
           bin/rails db:seed --trace
           echo "===  END Seed ==="
-          bundle exec rake test
           bundle exec rake cucumber
