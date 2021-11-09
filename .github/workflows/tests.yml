@@ -36,5 +36,8 @@ jobs:
           RAILS_ENV: test
         run: |
           bin/rails db:prepare
+          echo "===  START Seed ==="
+          bin/rails db:seed
+          echo "===  END Seed ==="
           bundle exec rake test
           bundle exec rake cucumber
