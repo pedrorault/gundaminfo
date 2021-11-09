@@ -19,7 +19,7 @@ test:
   <<: *default
   database: gunpla_test
   host:  localhost #<%= ENV['POSTGRES_HOST'] %>
-  port: <%= ENV['POSTGRES_PORT'] || 8432 %>
+  port: <%= ENV['POSTGRES_PORT'] %>
 
 production:
   <<: *default
