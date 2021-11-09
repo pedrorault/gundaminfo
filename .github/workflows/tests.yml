@@ -2,7 +2,6 @@ on:
   push:
     branches:
       - main
-      - rake-cucumber
   workflow_dispatch:
 
 jobs:
