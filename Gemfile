@@ -37,4 +37,6 @@ group :test do
   gem 'selenium-webdriver'
   gem 'chromedriver-helper'
   gem 'report_builder'
+  gem "cucumber-rails", "~> 2.4", require: false
+  gem 'database_cleaner'
 end
