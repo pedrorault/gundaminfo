@@ -30,7 +30,7 @@ jobs:
           bundler-cache: true
       - name: Rake Test
         env:
-          POSTGRES_HOST: postgres
+          POSTGRES_HOST: localhost
           POSTGRES_PORT: 5432
           POSTGRES_DB: test
           RAILS_ENV: test
