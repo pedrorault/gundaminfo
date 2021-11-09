@@ -3,10 +3,10 @@ default: &default
   encoding: unicode
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   # == CONFIGURE SEU BANCO LOCAL AQUI ==
-  # username: postgres
-  # password: postgres
-  # host: localhost
-  # port: <%= ENV['POSTGRES_PORT'] %>
+  username: postgres
+  password: postgres
+  host: localhost
+  port: 5432
   # == CONFIGURE SEU BANCO LOCAL AQUI ==
 development:
   <<: *default
