@@ -47,7 +47,7 @@ Guia de instalação: [https://github.com/rbenv/rbenv#installation](https://gith
     rbenv version
     ```
 
-1. Configurar o arquivo ```config/database.yml``` com as credenciais e locais do seu banco. Por default, a configuração padrão não é necessária de ser alterada, o deploy para o heroku funciona normalmente.
+1. Suba o container do docker com ```docker-compose up -d``` para ter o banco de dados local
 
 2. Utilize o comando ```rails db:create``` para criar o db (ou ```db:migrate``` para alguma alteração)
 
