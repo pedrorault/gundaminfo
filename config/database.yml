@@ -6,7 +6,7 @@ default: &default
   username: postgres
   password: postgres
   host: localhost
-  port: 5432
+  port: <%= ENV['POSTGRES_PORT'] || '8432' %>
   # == CONFIGURE SEU BANCO LOCAL AQUI ==
 development:
   <<: *default
@@ -19,7 +19,6 @@ test:
   <<: *default
   database: gunpla_test
   host:  localhost #<%= ENV['POSTGRES_HOST'] %>
-  port: <%= ENV['POSTGRES_PORT'] %>
 
 production:
   <<: *default
