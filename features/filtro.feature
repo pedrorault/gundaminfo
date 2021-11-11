@@ -8,21 +8,21 @@ Para poder achar modelos desejados mais facilmente
 Cenário: Filtro por nome
 Dado que o usuário esteja na tela principal
 E selecione o atributo "Nome"
-Quando preencho o campo "value" com "zak"
+Quando preencho o campo "value" com "zakku"
 E clico em procurar
-Então deverá ser mostrado 1 modelos correspondentes
+Então deverá ser mostrado o modelo com nome "Zakku II"
 
 Cenário: Filtro por ano
 Dado que o usuário esteja na tela principal
 E selecione o atributo "Ano"
-Quando preencho o campo "value" com "1999"
+Quando preencho o campo "value" com "2021"
 E clico em procurar
-Então deverá ser mostrado 1 modelos correspondentes
+Então deverá ser mostrado o modelo gunpla "RG MSN-02 Zeong"
 
 Cenário: Filtro por qualidade
 Dado que o usuário esteja na tela principal
 E selecione o atributo "Qualidade"
 Quando preencho o campo "value" com "rg"
 E clico em procurar
-Então deverá ser mostrado 2 modelos correspondentes
+Então deverá ser mostrado o modelo "RG MS-06R-2" e "OZ-00MS"
 
