@@ -1,6 +1,5 @@
 [![.github/workflows/tests.yml](https://github.com/pedrorault/gundaminfo/actions/workflows/tests.yml/badge.svg)](https://github.com/pedrorault/gundaminfo/actions/workflows/tests.yml)
 [![Maintainability](https://api.codeclimate.com/v1/badges/ccf5b3f9067cd1231d30/maintainability)](https://codeclimate.com/github/pedrorault/gundaminfo/maintainability)
-[![Test Coverage](https://api.codeclimate.com/v1/badges/ccf5b3f9067cd1231d30/test_coverage)](https://codeclimate.com/github/pedrorault/gundaminfo/test_coverage)
 [![Heroku](https://img.icons8.com/color/30/000000/heroku.png)](https://gundaminfo.herokuapp.com/)
 
 
