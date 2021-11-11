@@ -22,3 +22,11 @@ Cenário: Voltar para pagina principal
 Dado que o estou na tela de Contribuição
 E clico em voltar
 Então deverá retornar para a página inicial
+
+Cenário: Editar uma colaboração
+Dado que eu estou na página do modelo
+Quando eu clicar em Editar
+Quando eu modificar o campo nome com "MSN-04 Sazabi"
+Quando eu modificar o campo escala com "1/145"
+Quando eu clicar em Update toy
+Então o nome e escala agora são "MSN-04 Sazabi" e "1/145"
