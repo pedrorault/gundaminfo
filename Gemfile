@@ -12,7 +12,7 @@ gem 'puma', '~> 5.0'
 # Use SCSS for stylesheets
 gem 'sass-rails', '>= 6'
 # Use Active Model has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+gem 'bcrypt', '~> 3.1.7'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -39,3 +39,5 @@ group :test do
   gem "cucumber-rails", "~> 2.4", require: false
   gem 'database_cleaner'
 end
+
+gem "rails-i18n", "~> 6.0"
