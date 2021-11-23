@@ -10,6 +10,10 @@ class ToysController < ApplicationController
       @toys = @toys.filter_by_ano(params[:value]) if params[:value].present?
     elsif params[:attr].eql? "Qualidade"
       @toys = @toys.filter_by_qualidade(params[:value]) if params[:value].present?
+    elsif params[:attr].eql? "Escala"
+      @toys = @toys.filter_by_escala(params[:value]) if params[:value].present?
+    elsif params[:attr].eql? "Série"
+      @toys = @toys.filter_by_serie(params[:value]) if params[:value].present?
     else
       @toys = Toy.all
     end
