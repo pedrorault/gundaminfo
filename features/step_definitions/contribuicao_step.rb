@@ -30,8 +30,8 @@ Quando('preencho o campo Imagem com {string}') do |string|
     fill_in "toy_imagem", :with => string
 end
   
-Quando('clico em create toy') do
-    click_on "Create Toy"
+Quando('clico em Criar Toy') do
+    click_on "Criar Toy"
 end
   
 Então('deverá ser mostrado o modelo {string}') do |string|
@@ -67,8 +67,8 @@ Quando('eu modificar o campo escala com {string}') do |string|
     fill_in "toy_escala", :with => string
 end
   
-Quando('eu clicar em Update toy') do
-    click_on "Update Toy"
+Quando('eu clicar em Atualizar Toy') do
+    click_on "Atualizar Toy"
 end
   
 Então('o nome e escala agora são {string} e {string}') do |string, string2|
