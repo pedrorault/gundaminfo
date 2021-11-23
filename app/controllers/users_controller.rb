@@ -1,10 +1,5 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [:show, :edit, :update, :destroy]
-
-  # GET /users
-  def index
-    @users = User.all
-  end
+  before_action :set_user, only: [:show, :edit, :update]
 
   # GET /users/1
   def show
@@ -24,7 +19,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
 
     if @user.save
-      redirect_to root, notice: 'User was successfully created.'
+      redirect_to toys_path, notice: 'User was successfully created.'
     else
       render :new
     end
@@ -53,6 +48,6 @@ class UsersController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def user_params
-      params.require(:user).permit(:email, :apelido, :password_digest, :moderador)
+      params.require(:user).permit(:email, :apelido, :password_digest)
     end
 end

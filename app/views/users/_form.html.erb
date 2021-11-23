@@ -12,26 +12,21 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :email %>
-    <%= form.text_field :email %>
+    <%= form.label :email, class: "label" %>
+    <%= form.text_field :email, class: "input", autocomplete: "off" %>
   </div>
 
   <div class="field">
-    <%= form.label :apelido %>
-    <%= form.text_field :apelido %>
+    <%= form.label :apelido, class: "label" %>
+    <%= form.text_field :apelido, class: "input", autocomplete: "off" %>
   </div>
 
   <div class="field">
-    <%= form.label :password_digest %>
-    <%= form.text_field :password_digest %>
-  </div>
-
-  <div class="field">
-    <%= form.label :moderador %>
-    <%= form.check_box :moderador %>
+    <%= form.label :password_digest, value: "Senha", class: "label" %>
+    <%= form.text_field :password_digest, class: "input", type: 'password' %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit "Criar Usuário", class: 'button' %>
   </div>
 <% end %>
