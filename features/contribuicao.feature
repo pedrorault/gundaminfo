@@ -15,7 +15,7 @@ Quando preencho o campo Ano com "2019"
 Quando preencho o campo Escala com "1/144"
 Quando preencho o campo Série com "XM-X1 Crossbone Gundam X-1"
 Quando preencho o campo Imagem com "https://static.wikia.nocookie.net/gunplabuilders/images/f/ff/RG-Crossbone-Gundam-box.jpg/revision/latest/scale-to-width-down/350?cb=20190524120957"
-Quando clico em create toy
+Quando clico em Criar Toy
 Então deverá ser mostrado o modelo "RG XM-X1 Crossbone Gundam X-1"
 
 Cenário: Voltar para pagina principal
@@ -28,5 +28,5 @@ Dado que eu estou na página do modelo
 Quando eu clicar em Editar
 Quando eu modificar o campo nome com "MSN-04 Sazabi"
 Quando eu modificar o campo escala com "1/145"
-Quando eu clicar em Update toy
+Quando eu clicar em Atualizar Toy
 Então o nome e escala agora são "MSN-04 Sazabi" e "1/145"
