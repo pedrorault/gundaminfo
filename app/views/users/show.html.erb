@@ -2,23 +2,19 @@
 
 <p>
   <strong>Email:</strong>
-  <%= @user.email %>
+  <%# FIXME: Nao carrega os dados%>
+  <%#= @user.email %>
 </p>
 
 <p>
   <strong>Apelido:</strong>
-  <%= @user.apelido %>
-</p>
-
-<p>
-  <strong>Password digest:</strong>
-  <%= @user.password_digest %>
+  <%#= @user.apelido %>
 </p>
 
 <p>
   <strong>Moderador:</strong>
-  <%= @user.moderador %>
+  <%#= @user.moderador %>
 </p>
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
+<%#= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>

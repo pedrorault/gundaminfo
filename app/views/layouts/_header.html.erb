@@ -11,8 +11,13 @@
   <div class="navbar-end">
     <div class="navbar-item">
       <div class="buttons">
-        <%= link_to "Registrar", new_user_url, class: 'button is-primary has-text-weight-bold' %>
-        <%= link_to "Log in", toys_path, class: 'button is-link has-text-weight-bold' %>
+        <% if logged_in? %>
+          <button class='button'><%= current_user.apelido %></button>
+          <%= link_to "Log out", logout_path, class: "button is-danger", method: :delete %>
+        <% else %>
+          <%= link_to "Registrar", new_user_url, class: 'button is-primary has-text-weight-bold' %>
+          <%= link_to "Log in", login_path, class: 'button is-link has-text-weight-bold' %>
+        <% end %>
       </div>
     </div>
   </div>
