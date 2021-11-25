@@ -7,71 +7,52 @@ Para que eu tenha acesso a funcionalidades exclusivas
 
 Cenário: Criar cadastro
 Dado que o estou na tela principal
-Quando clico no botão login
-Então deverá ser redirecionado para tela de login
-Quando clico no botão Criar usuário
+Quando clico no botão Registrar
 Então deverá ser redirecionado para tela de cadastro
 Quando preencho o campo e-mail com "flavinho@usp.br"
 Quando preencho o campo apelido com "Flavinho"
 Quando preencho o campo senha com "flavinho123"
 Quando clico em criar cadastro
-Então deverá aparecer na tela "Usuário criado com sucesso"
+Então deverá aparecer na tela "Flavinho"
 
 Cenário: cadastro - campo apelido sem preecher
 Dado que o estou na tela de cadastro
 Quando preencho o campo e-mail com "flavinho@usp.br"
 E preencho o campo senha com "flavinho123"
 E clico em criar cadastro
-Então deverá aparecer na tela "NOP"
+Então deverá aparecer na tela "Apelido não pode ficar em branco"
 
 Cenário: cadastro - campo e-mail sem preecher
 Dado que o estou na tela de cadastro
 Quando preencho o campo apelido com "Flavinho"
 E preencho o campo senha com "flavinho123"
 E clico em criar cadastro
-Então deverá aparecer na tela "NOP"
+Então deverá aparecer na tela "Email não pode ficar em branco"
 
 Cenário: cadastro - campo senha sem preecher
 Dado que o estou na tela de cadastro
 Quando preencho o campo e-mail com "flavinho@usp.br"
 Quando preencho o campo apelido com "Flavinho"
 E clico em criar cadastro
-Então deverá aparecer na tela "NOP"
-
-Cenário: cadastro - e-mail já utilizado
-Dado que o estou na tela de cadastro
-Quando preencho o campo e-mail com "flavinho@usp.br"
-Quando preencho o campo apelido com "Raziel"
-Quando preencho o campo senha com "macarrao777"
-Quando clico em criar cadastro
-Então deverá aparecer na tela "E-mail já utilizado"
-
-Cenário: cadastro - apelido já utilizado
-Dado que o estou na tela de cadastro
-Quando preencho o campo e-mail com "flavinho@usp.br"
-Quando preencho o campo apelido com "flavinho"
-Quando preencho o campo senha com "macarrao777"
-Quando clico em criar cadastro
-Então deverá aparecer na tela "Apelido indisponível"
+Então deverá aparecer na tela "Password não pode ficar em branco"
 
 Cenário: login
 Dado que o estou na tela de login
-Quando preencho o campo apelido com "Flavinho"
-E preencho o campo senha com "flavinho123"
-E clico em login
-Então deverá ser redirecionado para a tela principal
-E deverá aparecer "Flavinho" na tela
+Quando preencho o campo e-mail do login com "flavinho@usp.br"
+Quando preencho o campo senha do login com "flavinho123"
+E clico em login na pagina
+Então deverá ir para a página inicial
 
 Cenário: login - campo senha incorreto
 Dado que o estou na tela de login
-Quando preencho o campo apelido com "Flavinho"
-E preencho o campo senha com "flavinho1234"
-E clico em login
-Então deverá aparecer "informações inválidas" na tela
+Quando preencho o campo e-mail do login com "flavinho@usp.br"
+E preencho o campo senha do login com "flavinho1234"
+E clico em login na pagina
+Então deverá aparecer "Usuário não encontrado!"
 
 Cenário: login - campo apelido incorreto
 Dado que o estou na tela de login
-Quando preencho o campo apelido com "Flavinhu"
-E preencho o campo senha com "flavinho123"
-E clico em login
-Então deverá aparecer "informações inválidas" na tela
+Quando preencho o campo e-mail do login com "flavinho@usp.br"
+E preencho o campo senha do login com "flavinho123"
+E clico em login na pagina
+Então deverá aparecer "Usuário não encontrado!"
