@@ -5,6 +5,23 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+users = User.create([
+  {
+    email: 'flavin@gmail.com',
+    apelido: 'Flavin',
+    password: 'danieldaniel'
+  },
+  {
+    email: 'pedrorault@gmail.com',
+    apelido: 'Pedrorault',
+    password: 'esqueci'
+  },
+  {
+    email: 'admin@admin.com',
+    apelido: 'Admin',
+    password: 'adminadmin'
+  },
+])
 gundams = Toy.create(
   [
     {

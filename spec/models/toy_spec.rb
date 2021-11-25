@@ -1,5 +1,10 @@
 require 'rails_helper'
 
 RSpec.describe Toy, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  context "Aplicar Filtros" do
+    it "Filtro por nome válido" do
+    end
+    it "Filtro por nome válido" do
+    end
+  end
 end
