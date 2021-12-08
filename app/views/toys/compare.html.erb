@@ -1,0 +1,50 @@
+
+<div class="columns pt-5">
+  <div class="column is-4 is-offset-4 box is-flex is-flex-direction-column">
+    <h1 class="title is-align-self-center"><%= @item1.nome %> <span style="color:red">VS</span> <%= @item2.nome %></h1>
+    <div class="is-flex container">
+    </div>
+    <table class="table is-bordered">
+    <tr>
+      <th></th>
+      <th>Item 1</th>
+      <th>Item 2</th>
+    </tr>
+    <tr>
+    <td></td>
+      <td><%= image_tag "#{@item1.imagem}", style: "width: 300px;height: 300px; border: solid 1px black", alt: "item1" %></td>
+      <td><%= image_tag "#{@item2.imagem}", style: "width: 300px;height: 300px; border: solid 1px black", alt: "item2" %></td>
+    </tr>
+    <tr>
+      <th>Nome</th>
+      <td><%= @item1.nome %></td>
+      <td><%= @item2.nome %></td>
+    </tr>
+    <tr>
+      <th>Ano</th>
+      <td><%= @item1.ano %></td>
+      <td><%= @item2.ano %></td>
+    </tr>
+    <tr>
+      <th>Qualidade</th>
+      <td><%= @item1.qualidade %></td>
+      <td><%= @item2.qualidade %></td>
+    </tr>
+    <tr>
+      <th>Série</th>
+      <td><%= @item1.serie %></td>
+      <td><%= @item2.serie %></td>
+    </tr>
+    <tr>
+      <th>Escala</th>
+      <td><%= @item1.escala %></td>
+      <td><%= @item2.escala %></td>
+    </tr>
+    </table>
+    <div class="control is-grouped">
+      <%= link_to 'Voltar', comparacao_path, class: "button" %>
+    </div>
+  </div>
+</div>
+
+
