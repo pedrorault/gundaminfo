@@ -8,6 +8,7 @@ Para que eu possa ajudar a crescer o catálogo
 
 Cenário: Inserir informações sobre um modelo
 Dado que o estou na tela principal
+Dado que sou um moderador
 Quando clico no botão Criar novo item
 Quando preencho o campo Nome com "RG XM-X1 Crossbone Gundam X-1"
 Quando preencho o campo Qualidade com "RG"

@@ -4,4 +4,8 @@ class Toy < ApplicationRecord
   scope :filter_by_qualidade, -> (value) { where("qualidade ilike ?", "%#{value}%")}
   scope :filter_by_escala, -> (value) { where(escala: value)}
   scope :filter_by_serie, -> (value) { where(serie: value)}
+
+  def set_defaults
+    self.moderado ||= false
+  end
 end

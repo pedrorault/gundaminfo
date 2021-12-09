@@ -3,7 +3,7 @@ class ToysController < ApplicationController
 
   # GET /toys
   def index
-    @toys = Toy.all
+    @toys = Toy.where(moderado: true)
     if params[:attr].eql? "Nome"
       @toys = @toys.filter_by_name_like(params[:value]) if params[:value].present?
     elsif params[:attr].eql? "Ano"
@@ -15,7 +15,7 @@ class ToysController < ApplicationController
     elsif params[:attr].eql? "Série"
       @toys = @toys.filter_by_serie(params[:value]) if params[:value].present?
     else
-      @toys = Toy.all
+      @toys = Toy.where(moderado: true)
     end
 
   end
@@ -71,6 +71,16 @@ class ToysController < ApplicationController
     end
   end
 
+  def moderar 
+    @toys = Toy.where(moderado: false)
+  end
+
+  def change_moderado
+    @toy = Toy.find(params[:id])
+    @toy.update(moderado: true)
+    redirect_to :moderacao
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_toy
@@ -79,6 +89,6 @@ class ToysController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def toy_params
-      params.require(:toy).permit(:nome, :qualidade, :ano, :escala, :serie)
+      params.require(:toy).permit(:nome, :qualidade, :ano, :escala, :serie, :imagem)
     end
 end

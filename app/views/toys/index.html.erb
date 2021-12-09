@@ -11,8 +11,13 @@
         <%= submit_tag("Procurar", :name => nil, class: "button is-link") %>
       </div>
     <% end %>
-    <%= link_to 'Criar novo item', new_toy_path, class: 'button is-link' %>
+    <% if logged_in? %>
+      <%= link_to 'Criar novo item', new_toy_path, class: 'button is-link' %>
+    <% end %>
     <%= link_to 'Comparar', comparacao_path, class: 'button is-primary' %>
+    <% if is_moderador? %>
+      <%= link_to 'Modelos pendentes', moderacao_path, class: 'button is-warning' %>
+    <% end %>
     <hr/>
     <% @toys.each do |gundam| %>
       <%# <div style="border: 1px solid black; margin-bottom: 5px; width: 250px" class="is-align-self-center">%>

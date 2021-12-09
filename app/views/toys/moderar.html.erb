@@ -1,0 +1,28 @@
+<div class="columns pt-5 mr-0">
+  <div class="column is-4 is-offset-4 box is-flex is-flex-direction-column">
+    <h1 class="title is-align-self-center">Moderar Modelos Pendentes</h1>
+    <% if @toys.length == 0 %>
+      <div class="container">
+        <p class="is-size-4">Não há modelos com status de moderado = false!!</p>
+      </div>
+    <% end %>
+    <div class="box is-align-self-center is-flex is-flex-direction-column">
+      <table class="table">
+        <% @toys.each do |gundam| %>
+          <%# <div style="border: 1px solid black; margin-bottom: 5px; width: 250px" class="is-align-self-center">%>
+          <tr>
+            <td><p class="is-size-4 is-align-self-center"><%= link_to gundam.nome, gundam %></p></td>
+            <td><%= image_tag "#{gundam.imagem}", style: "width:50px;heigth: 50px" %></td>
+            <td>   
+              <%= button_to "Aceitar", change_moderado_toy_path(gundam), method: "patch", class:"button is-primary" %>
+            </td>
+            <td>
+              <%= button_to "Recusar", toy_path(gundam), method: "delete", class:"button is-danger" %>
+          </tr>
+        <% end %>
+      </table>
+    </div>
+
+    <%= link_to 'Voltar', toys_path, class: "button is-link mt-5" %>
+  </div>
+</div>

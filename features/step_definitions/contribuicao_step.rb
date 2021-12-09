@@ -1,7 +1,14 @@
 Dado('que o estou na tela principal') do
     visit '/'
 end
-  
+
+Dado('que sou um moderador') do
+    click_on "Log in"
+    fill_in "session[email]", :with => 'admin@admin.com'
+    fill_in "session[password]", :with => 'adminadmin'
+    click_on "commit"
+end
+
 Quando('clico no botão Criar novo item') do
     click_on "Criar novo item"
 end
