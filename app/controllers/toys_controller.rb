@@ -58,6 +58,18 @@ class ToysController < ApplicationController
     @toy.destroy
     redirect_to toys_url, notice: 'Toy was successfully destroyed.'
   end
+  
+  def compare_select
+  end
+
+  def compare
+    if params[:item1].present? && params[:item2].present?
+      @item1 = Toy.find(params[:item1])
+      @item2 = Toy.find(params[:item2])
+    else
+      render :compare_select
+    end
+  end
 
   private
     # Use callbacks to share common setup or constraints between actions.
