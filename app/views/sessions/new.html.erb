@@ -2,11 +2,11 @@
 <div>
   <div class='container'>
     <h1 class='title'>Login!</h1>
-    <%# flash.each do |type, msg| %>
-      <!-- div class="notification is-danger">
-        <%#= msg %>
-      </div-->
-    <%# end %>
+    <% flash.each do |type, msg| %>
+      <div class="notification is-danger">
+        <%= msg %>
+      </div>
+    <% end %>
     <%= form_with(url: login_path, scope: :session, local: true) do |f| %>
       <%= f.label :email %>
       <%= f.email_field :email, class: 'input' %>
