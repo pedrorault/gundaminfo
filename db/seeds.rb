@@ -19,7 +19,8 @@ users = User.create([
   {
     email: 'admin@admin.com',
     apelido: 'Admin',
-    password: 'adminadmin'
+    password: 'adminadmin',
+    moderador: true
   },
 ])
 gundams = Toy.create(
